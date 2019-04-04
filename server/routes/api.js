@@ -7,7 +7,11 @@ router.get("/sanity", function (req, res) {
 })
 
 router.get("/recipes/:food", function (req, res) {
-    request(`http://www.recipepuppy.com/api/?q=${req.params.food}`, function (error, data, body) {
+    let ingredientsQuery = ""
+    if(req.query) {ingredientsQuery += `i=${req.query.ingredientList}&`
+    }
+    console.log(`http://www.recipepuppy.com/api/?${ingredientsQuery}q=${req.params.food}`)
+    request(`http://www.recipepuppy.com/api/?${ingredientsQuery}q=${req.params.food}`, function (error, data, body) {
         let recipes = JSON.parse(data.body).results
         let toClient = recipes.map(r => { return {
             title: r.title,

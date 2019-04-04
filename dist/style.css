@@ -19,6 +19,8 @@ body {
     margin: 10px;
     display: block;
     background-color: #f1c40f;
+    border: outset #34495e 2px;
+    box-shadow: #34495e 1px 1px;
 }
 
 a {
