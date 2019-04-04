@@ -38,7 +38,6 @@ router.get("/recipes/:food", function (req, res) {
         else {
             toClient = recipeList
         }
-        console.log(toClient)
         res.send(toClient)
     })
 })
