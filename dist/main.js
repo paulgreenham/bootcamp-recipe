@@ -10,7 +10,11 @@ const removeSpaces = function (str) {
 }
 
 const getRecipe = function (food, ingredients) {
-    $.get(`./recipes/${food}?ingredientList=${removeSpaces(ingredients)}`, function (response) {
+    let ingredientsQuery = ""
+    if(ingredients) {
+        ingredientsQuery += `?ingredientList=${removeSpaces(ingredients)}`
+    }
+    $.get(`./recipes/${food + ingredientsQuery}`, function (response) {
         render.displayRecipes(response)
     })
 }

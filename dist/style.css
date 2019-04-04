@@ -6,6 +6,25 @@ body {
 
 #search-container {
     padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(3, 1fr);
+    grid-template:
+    "f i b . . "
+}
+
+#food-search {
+    grid-area: f;
+    margin: 5px;
+}
+
+#ingredient-search {
+    grid-area: i;
+    margin: 5px;
+}
+
+button {
+    grid-area: b;
+    margin: 5px;
 }
 
 #results-container {
