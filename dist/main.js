@@ -1,8 +1,8 @@
-
+const render = new Renderer
 
 const getRecipe = function (food) {
     $.get(`./recipes/${food}`, function (response) {
-        console.log(response)
+        render.displayRecipes(response)
     })
 }
 
