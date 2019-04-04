@@ -9,3 +9,7 @@ const getRecipe = function (food) {
 $("button").on("click", function () {
     getRecipe($("#food-search").val())
 })
+
+$("#results-container").on("click", "img", function () {
+    console.log($(this).closest(".recipe").find("li:first-child").text())
+})

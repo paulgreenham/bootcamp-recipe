@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
+}
+
+#search-container {
+    padding: 5px;
+}
+
+#results-container {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.recipe {
+    padding: 5px;
+    margin: 10px;
+    display: block;
+    background-color: #f1c40f;
+}
+
+a {
+    font-size: 18px;
+    color: #34495e;
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+}
+
+img {
+    display: block;
+    margin: 5px;
+}
+
+ul {
+    columns: 3;
+}
